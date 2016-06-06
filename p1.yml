@@ -2,4 +2,4 @@
   remote_user: root
   tasks:
   - name: fetch pub keys from hosts
-    fetch: src=/root/.ssh/id_rsa.pub dest=/tmp/id_rsa.pub flat=yes
+    fetch: src=/root/.ssh/id_rsa.pub dest=/tmp/{{ ansible_hostname }}_{{ ansible_default_ipv4.address }}_id_rsa.pub_{{ ansible_date_time.date }}_{{ ansible_date_time.time }} flat=yes
