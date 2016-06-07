@@ -1,5 +1,5 @@
-- hosts: backup
+- hosts: vyatta_both
   remote_user: vyatta
   tasks:
-  - name: fetch pub keys from hosts
+  - name: fetch config.boot from hosts
     fetch: src=config.boot dest=/tmp/{{ ansible_hostname }}_{{ ansible_default_ipv4.address }}_config.boot_{{ ansible_date_time.date }}_{{ ansible_date_time.time }} flat=yes
