@@ -1,0 +1,5 @@
+- hosts: 192.168.56.103
+  remote_user: root
+  tasks:
+    - name: test env
+      command: {{ cmd }}
