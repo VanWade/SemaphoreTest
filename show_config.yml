@@ -1,0 +1,5 @@
+- hosts: vyatta1,vyatta2
+  remote_user: vyatta
+  tasks:
+    - name: show vyatta configuration
+      command: vbash -ic 'show configuration'
