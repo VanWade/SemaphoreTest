@@ -1,0 +1,19 @@
+- hosts: vyatta_a
+  remote_user: vyatta
+  tasks:
+  - name: copy file from workstation to node
+    copy: src=/tmp/cdsdev-test-mon01-01-a_169.54.100.132_config.boot_2016-06-07_02:02:26 dest=/home/vyatta/config.boot 
+- hosts: vyatta_b
+  remote_user: vyatta
+  tasks:
+  - name: copy file from workstation to node
+    copy: src=/tmp/cdsdev-test-mon01-01-b_169.54.100.131_config.boot_2016-06-07_02:02:29 dest=/home/vyatta/config.boot 
+- hosts: vyatta_both
+  remote_user: vyatta
+  tasks:
+  - name: copy script-template from workstation to node
+    copy: src=/tmp/script-template dest=/home/vyatta/
+  - name: copy reload script file from workstation to node
+    copy: src=/tmp/load_config.sh dest=/home/vyatta/
+  - name: execute reload script
+    command: bash load_config.sh
