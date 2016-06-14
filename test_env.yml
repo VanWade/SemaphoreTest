@@ -2,4 +2,4 @@
   remote_user: root
   tasks:
     - name: test env
-      command: {{ cmd }}
+      command: "{{ cmd }}"
