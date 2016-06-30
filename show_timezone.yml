@@ -1,5 +1,0 @@
-- hosts: vyatta1,vyatta2
-  remote_user: vyatta
-  tasks:
-    - name: show time-zone configuration
-      shell: vbash -ic 'show configuration' | grep 'time-zone'

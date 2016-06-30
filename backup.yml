@@ -1,9 +1,0 @@
-- hosts: vyatta_both
-  remote_user: vyatta
-  tasks:
-  - name: fetch config.boot from hosts
-    fetch: src=config.boot dest=/tmp/{{ ansible_hostname }}_{{ ansible_default_ipv4.address }}_config.boot_{{ ansible_date_time.date }}_{{ ansible_date_time.time }} flat=yes
-  - name: fetch script-template
-    fetch: src=script-template dest=/tmp/ flat=yes
-  - name: fetch load_config.sh
-    fetch: src=load.config.sh dest=/tmp/ flat=yes

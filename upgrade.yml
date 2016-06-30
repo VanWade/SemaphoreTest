@@ -1,8 +1,0 @@
-- hosts: vyatta1,vyatta2
-  remote_user: vyatta
-  become: yes
-  tasks: 
-    #- name: download vyatta upgrade iso file
-    #  command: wget 
-    - name: upgrade vyatta
-      command: bash upgrade_vyatta.sh

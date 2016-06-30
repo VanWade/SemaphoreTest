@@ -1,7 +1,0 @@
-- hosts: vyatta1,vyatta2
-  remote_user: vyatta
-  tasks: 
-    #- name: download vyatta upgrade iso file
-    #  command: wget 
-    - name: show system image
-      command: vbash -ic 'show system image'
